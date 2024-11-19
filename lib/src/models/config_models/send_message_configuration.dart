@@ -168,10 +168,6 @@ class TextFieldConfiguration {
   /// Default is [true].
   final bool enabled;
 
-  /// Determines if pressing enter submits the message.
-  /// Defaults to [false].
-  final bool enableEnterToSubmit;
-
   const TextFieldConfiguration({
     this.contentPadding,
     this.maxLines,
@@ -188,7 +184,6 @@ class TextFieldConfiguration {
     this.inputFormatters,
     this.textCapitalization,
     this.enabled = true,
-    this.enableEnterToSubmit = false,
   });
 }
 
