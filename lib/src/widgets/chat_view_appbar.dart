@@ -158,8 +158,7 @@ class ChatViewAppBar extends StatelessWidget {
                       crossAxisAlignment: centerTitle ? CrossAxisAlignment.center : CrossAxisAlignment.start,
                       mainAxisAlignment: centerTitle ? MainAxisAlignment.center : MainAxisAlignment.start,
                       children: [
-                        SizedBox(
-                          height: 20,
+                        Center(
                           child: chatTitle.isNotEmpty
                               ? Text(
                                   chatTitle,
