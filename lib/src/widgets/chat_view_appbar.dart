@@ -158,25 +158,27 @@ class ChatViewAppBar extends StatelessWidget {
                       crossAxisAlignment: centerTitle ? CrossAxisAlignment.center : CrossAxisAlignment.start,
                       mainAxisAlignment: centerTitle ? MainAxisAlignment.center : MainAxisAlignment.start,
                       children: [
-                        chatTitle.isNotEmpty
-                            ? Text(
-                                chatTitle,
-                                style: chatTitleTextStyle ??
-                                    const TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                      letterSpacing: 0.25,
-                                    ),
-                              )
-                            : Shimmer.fromColors(
-                                baseColor: Colors.grey[300]!,
-                                highlightColor: Colors.grey[100]!,
-                                child: Container(
-                                  width: 100,
-                                  height: 20,
-                                  color: Colors.white,
+                        SizedBox(
+                          height: 20,
+                          child: chatTitle.isNotEmpty
+                              ? Text(
+                                  chatTitle,
+                                  style: chatTitleTextStyle ??
+                                      const TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        letterSpacing: 0.25,
+                                      ),
+                                )
+                              : Shimmer.fromColors(
+                                  baseColor: Colors.grey[300]!,
+                                  highlightColor: Colors.grey[100]!,
+                                  child: Container(
+                                    width: 100,
+                                    color: Colors.white,
+                                  ),
                                 ),
-                              ),
+                        ),
                         if (userStatus != null)
                           Text(
                             userStatus!,
