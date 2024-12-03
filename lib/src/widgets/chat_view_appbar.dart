@@ -42,6 +42,8 @@ class ChatViewAppBar extends StatelessWidget {
     this.chatTitleTextStyle,
     this.userStatusTextStyle,
     this.backArrowColor,
+    this.shimmerBaseColor = Colors.black38,
+    this.shimmerHighlightColor = Colors.black12,
     this.actions,
     this.elevation = 1.0,
     this.onBackPress,
@@ -58,6 +60,10 @@ class ChatViewAppBar extends StatelessWidget {
   /// [Deprecated] use [backgroundColor] instead, this will be removed in next versions
   @Deprecated('Use backgroundColor instead. This will be removed in future versions.')
   final Color backGroundColor;
+
+  final Color shimmerBaseColor;
+
+  final Color shimmerHighlightColor;
 
   /// Allow user to change colour of appbar.
   final Color? backgroundColor;
@@ -158,7 +164,8 @@ class ChatViewAppBar extends StatelessWidget {
                       crossAxisAlignment: centerTitle ? CrossAxisAlignment.center : CrossAxisAlignment.start,
                       mainAxisAlignment: centerTitle ? MainAxisAlignment.center : MainAxisAlignment.start,
                       children: [
-                        Center(
+                        Align(
+                          alignment: centerTitle ? Alignment.center : Alignment.centerLeft,
                           child: chatTitle.isNotEmpty
                               ? Text(
                                   chatTitle,
@@ -170,10 +177,11 @@ class ChatViewAppBar extends StatelessWidget {
                                       ),
                                 )
                               : Shimmer.fromColors(
-                                  baseColor: Colors.grey[300]!,
-                                  highlightColor: Colors.grey[100]!,
+                                  baseColor: shimmerBaseColor,
+                                  highlightColor: shimmerHighlightColor,
                                   child: Container(
                                     width: 100,
+                                    height: 20,
                                     color: Colors.white,
                                   ),
                                 ),
