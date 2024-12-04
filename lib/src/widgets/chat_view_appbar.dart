@@ -44,6 +44,7 @@ class ChatViewAppBar extends StatelessWidget {
     this.backArrowColor,
     this.shimmerBaseColor = Colors.black38,
     this.shimmerHighlightColor = Colors.black12,
+    this.shimmerChild,
     this.actions,
     this.elevation = 1.0,
     this.onBackPress,
@@ -64,6 +65,8 @@ class ChatViewAppBar extends StatelessWidget {
   final Color shimmerBaseColor;
 
   final Color shimmerHighlightColor;
+
+  final Widget? shimmerChild;
 
   /// Allow user to change colour of appbar.
   final Color? backgroundColor;
@@ -179,11 +182,12 @@ class ChatViewAppBar extends StatelessWidget {
                               : Shimmer.fromColors(
                                   baseColor: shimmerBaseColor,
                                   highlightColor: shimmerHighlightColor,
-                                  child: Container(
-                                    width: 100,
-                                    height: 20,
-                                    color: Colors.white,
-                                  ),
+                                  child: shimmerChild ??
+                                      Container(
+                                        width: 100,
+                                        height: 20,
+                                        color: Colors.white,
+                                      ),
                                 ),
                         ),
                         if (userStatus != null)
