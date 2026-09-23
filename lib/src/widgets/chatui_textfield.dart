@@ -228,7 +228,7 @@ class _ChatUITextFieldState extends State<ChatUITextField> {
                         ? TextInputAction.send
                         : TextInputAction.newline,
                     decoration: InputDecoration(
-                      hintText: textFieldConfig?.hintText ?? PackageStrings.message,
+                      hintText: textFieldConfig?.hintText ?? PackageStrings.currentLocale.message,
                       fillColor: sendMessageConfig?.textFieldBackgroundColor ?? Colors.white,
                       filled: true,
                       hintStyle: textFieldConfig?.hintStyle ??

@@ -244,7 +244,7 @@ class _TypingIndicatorState extends State<TypingIndicator> with TickerProviderSt
               imageType: profileCircleConfiguration?.imageType,
               assetImageErrorBuilder: profileCircleConfiguration?.assetImageErrorBuilder,
               networkImageErrorBuilder: profileCircleConfiguration?.networkImageErrorBuilder,
-              defaultAvatarImage: profileCircleConfiguration?.defaultAvatarImage ?? profileImage,
+              defaultAvatarImage: profileCircleConfiguration?.defaultAvatarImage ?? Constants.profileImage,
               networkImageProgressIndicatorBuilder: profileCircleConfiguration?.networkImageProgressIndicatorBuilder,
             ),
             bubble,

@@ -147,7 +147,7 @@ class _ChatBubbleWidgetState extends State<ChatBubbleWidget> {
       profileCirclePadding: profileCircleConfig?.padding,
       imageUrl: messagedUser?.profilePhoto,
       imageType: messagedUser?.imageType,
-      defaultAvatarImage: messagedUser?.defaultAvatarImage ?? profileImage,
+      defaultAvatarImage: messagedUser?.defaultAvatarImage ?? Constants.profileImage,
       networkImageProgressIndicatorBuilder: messagedUser?.networkImageProgressIndicatorBuilder,
       assetImageErrorBuilder: messagedUser?.assetImageErrorBuilder,
       networkImageErrorBuilder: messagedUser?.networkImageErrorBuilder,
